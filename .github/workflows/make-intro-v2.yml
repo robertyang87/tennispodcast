@@ -1,0 +1,38 @@
+name: make-intro-v2
+
+# Intro v2: umpire-led opening (PA-processed) + real match ball hits.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  intro:
+    runs-on: ubuntu-latest
+    env:
+      MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg (not present on this runner image)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Produce intro v2 (EN + ZH umpire variants)
+        run: python3 tools/make_intro_v2.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: podcast-intro-v2
+          path: output/
+
+      - name: Publish to intro-002 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view intro-002 >/dev/null 2>&1 || \
+            gh release create intro-002 --title "固定前导音试听 intro-002（裁判开场+真实击球声）" \
+              --notes "裁判扩声开场（EN/ZH 两版）+ 真实比赛发球声 + 品牌口播，-18 LUFS"
+          gh release upload intro-002 output/intro_v2_en.mp3 output/intro_v2_zh.mp3 output/episode_with_intro_v2.mp3 output/intro_v2_notes.md --clobber
