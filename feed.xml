@@ -7,10 +7,32 @@
     <title>网球时差</title>
     <link>https://robertyang87.github.io/tennispodcast/</link>
     <language>zh-cn</language>
-    <description>网球时差 · 听见球场另一边。一档聊网球的播客：赛后复盘、球员故事、规则与词源。视频版在微信视频号 / 小红书 / 抖音同名「网球时差」。本节目为 AI 协助制作、AI 语音播报。</description>
+    <description>网球时差 · 听见球场另一边
+
+一档只聊职业网球的播客。ATP、WTA、大满贯——比赛、球员，和网球背后的规则与故事。
+
+三个固定栏目：
+· 赛后复盘——刚打完的大赛，关键分、转折点与战术，说透
+· 网球有故事——一位球员、一段生涯，长篇慢慢讲
+· 规则与词源——解说天天挂在嘴边、却很少有人讲清的词与规则
+
+更新跟着赛历走，大赛周加密。视频版在微信视频号、小红书、抖音同名「网球时差」。
+
+本节目由 AI 协助制作、AI 语音播报；赛果与数据均经人工核对。</description>
     <atom:link href="https://robertyang87.github.io/tennispodcast/feed.xml" rel="self" type="application/rss+xml"/>
     <itunes:author>网球时差</itunes:author>
-    <itunes:summary>网球时差 · 听见球场另一边。一档聊网球的播客：赛后复盘、球员故事、规则与词源。视频版在微信视频号 / 小红书 / 抖音同名「网球时差」。本节目为 AI 协助制作、AI 语音播报。</itunes:summary>
+    <itunes:summary>网球时差 · 听见球场另一边
+
+一档只聊职业网球的播客。ATP、WTA、大满贯——比赛、球员，和网球背后的规则与故事。
+
+三个固定栏目：
+· 赛后复盘——刚打完的大赛，关键分、转折点与战术，说透
+· 网球有故事——一位球员、一段生涯，长篇慢慢讲
+· 规则与词源——解说天天挂在嘴边、却很少有人讲清的词与规则
+
+更新跟着赛历走，大赛周加密。视频版在微信视频号、小红书、抖音同名「网球时差」。
+
+本节目由 AI 协助制作、AI 语音播报；赛果与数据均经人工核对。</itunes:summary>
     <itunes:owner>
       <itunes:name>网球时差</itunes:name>
       <itunes:email>junyang.ustb@gmail.com</itunes:email>
@@ -22,13 +44,27 @@
     <itunes:type>episodic</itunes:type>
     <itunes:explicit>false</itunes:explicit>
     <item>
-      <title>试播集｜把比赛逼到抢七</title>
-      <description>抢七，是被一场打不完的比赛逼出来的。从范·艾伦 1970 年在美网首推，到伊斯内尔与马胡特 2010 年温网决胜盘 70 比 68、打满三天的十一小时之战，再到四大满贯 2022 年统一的决胜盘 10 分制抢七——这一期讲清抢七从哪来、为什么是现在这个样子。（试播集：流程与声音测试，正式节目筹备中。）</description>
+      <title>规则与词源｜抢七，是被一场打不完的比赛逼出来的</title>
+      <description>（试播集）抢七，是被一场打不完的比赛逼出来的——这一期讲清抢七的来历与现行规则。
+
+看点：
+· 范·艾伦 1970 年在美网首推抢七
+· 2010 年温网伊斯内尔 vs 马胡特：决胜盘 70 比 68，全场十一小时五分钟
+· 2019 年温网决胜盘 12 平后抢七；2022 年四大满贯统一为决胜盘 10 分制抢七
+
+本节目由 AI 协助制作、AI 语音播报；赛果与数据均经人工核对。</description>
       <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
       <guid isPermaLink="false">tennisjetlag-ep000-pilot-tiebreak</guid>
       <enclosure url="https://robertyang87.github.io/tennispodcast/demo_v3.mp3" length="2008749" type="audio/mpeg"/>
       <itunes:duration>2:05</itunes:duration>
-      <itunes:summary>抢七，是被一场打不完的比赛逼出来的。从范·艾伦 1970 年在美网首推，到伊斯内尔与马胡特 2010 年温网决胜盘 70 比 68、打满三天的十一小时之战，再到四大满贯 2022 年统一的决胜盘 10 分制抢七——这一期讲清抢七从哪来、为什么是现在这个样子。（试播集：流程与声音测试，正式节目筹备中。）</itunes:summary>
+      <itunes:summary>（试播集）抢七，是被一场打不完的比赛逼出来的——这一期讲清抢七的来历与现行规则。
+
+看点：
+· 范·艾伦 1970 年在美网首推抢七
+· 2010 年温网伊斯内尔 vs 马胡特：决胜盘 70 比 68，全场十一小时五分钟
+· 2019 年温网决胜盘 12 平后抢七；2022 年四大满贯统一为决胜盘 10 分制抢七
+
+本节目由 AI 协助制作、AI 语音播报；赛果与数据均经人工核对。</itunes:summary>
       <itunes:explicit>false</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
