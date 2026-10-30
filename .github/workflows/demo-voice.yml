@@ -1,0 +1,37 @@
+name: demo-voice
+
+# Brain (OpenAI Luna) writes -> Mouth (MiniMax) speaks.
+# Publishes output/demo.mp3 + script to the demo-001 release for listening.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write script and synthesize
+        run: python3 tools/demo_voice.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-voice
+          path: output/
+
+      - name: Publish to demo-001 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view demo-001 >/dev/null 2>&1 || \
+            gh release create demo-001 --title "播客试听 demo-001" \
+              --notes "Luna 写稿 + MiniMax 合成试听样带"
+          gh release upload demo-001 output/demo.mp3 output/script.md --clobber
