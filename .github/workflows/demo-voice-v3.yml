@@ -1,0 +1,40 @@
+name: demo-voice-v3
+
+# Copy matched to voice: Luna writes a matched spec (text + speed +
+# pause + emotion + sfx per segment); the executor only obeys it.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg (not present on this runner image)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Write matched spec and produce v3
+        run: python3 tools/demo_voice_v3.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-voice-v3
+          path: output/
+
+      - name: Publish to demo-003 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view demo-003 >/dev/null 2>&1 || \
+            gh release create demo-003 --title "播客试听 demo-003（文案与声音匹配版）" \
+              --notes "Luna 产出匹配版分段稿（每段带语速/留白/情感/音效点），执行器照稿合成"
+          gh release upload demo-003 output/demo_v3.mp3 output/spec_v3.md --clobber
