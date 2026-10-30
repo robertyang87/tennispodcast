@@ -1,0 +1,38 @@
+name: make-intro
+
+# Fixed show intro audition + intro+v3 splice preview.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  intro:
+    runs-on: ubuntu-latest
+    env:
+      MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg (not present on this runner image)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Produce intro
+        run: python3 tools/make_intro.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: podcast-intro
+          path: output/
+
+      - name: Publish to intro-001 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view intro-001 >/dev/null 2>&1 || \
+            gh release create intro-001 --title "固定前导音试听 intro-001" \
+              --notes "标志击球声 + 欢呼声浪 + 温润男声品牌口播，-18 LUFS；含与 v3 的拼接版"
+          gh release upload intro-001 output/intro.mp3 output/episode_with_intro.mp3 output/intro_notes.md --clobber
