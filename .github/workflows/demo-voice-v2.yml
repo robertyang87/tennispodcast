@@ -1,0 +1,36 @@
+name: demo-voice-v2
+
+# Same script as demo-001, re-produced: adaptive per-segment speed,
+# structural pauses, ball-hit / applause sound design.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    env:
+      MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Synthesize segments and mix v2
+        run: python3 tools/demo_voice_v2.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-voice-v2
+          path: output/
+
+      - name: Publish to demo-002 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view demo-002 >/dev/null 2>&1 || \
+            gh release create demo-002 --title "播客试听 demo-002（混音版）" \
+              --notes "同稿对照：逐段变速 + 留白 + 击球/欢呼声音设计"
+          gh release upload demo-002 output/demo_v2.mp3 output/mix_notes.md --clobber
