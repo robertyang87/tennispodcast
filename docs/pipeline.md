@@ -71,7 +71,7 @@
 
 ## 待定项（所有者拍板）
 
-- [ ] 托管：RSS 自托管 vs 小宇宙托管（试点期先 RSS）
+- [x] 托管（2026-10-30 所有者实测定案）：GitHub Pages 自托管——feed 与音频同放 Pages （robertyang87.github.io/tennispodcast/），国内网络实测可在线播放、不卡；**Release 直链带 attachment 头点开只能下载，不作 enclosure/分享链接用**。同一 feed 分发小宇宙（RSS 认领）/ Apple Podcasts / Spotify。
 - [ ] 更新节奏：周更 / 随大赛节点
 - [x] 节目名（2026-10-30 所有者定案）：《网球时差》，副题/口播语「听见球场另一边」。
   曾议 AI 前缀名（AI说网球/网球AI说）未采纳——品牌资产优先，前导音口播不改。
