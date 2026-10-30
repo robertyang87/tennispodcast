@@ -1,0 +1,7 @@
+# 本地合成中间产物不进仓；成品音频走 Release，仓里只登记元数据
+*.mp3
+*.wav
+*.m4a
+tmp/
+work/
+__pycache__/
