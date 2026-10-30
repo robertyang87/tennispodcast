@@ -1,0 +1,58 @@
+name: api-smoke
+
+# Manual check: are the API secrets present, and do they actually work?
+# Never prints secret values — only presence and HTTP/API status.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+      PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+    steps:
+      - name: Presence check
+        run: |
+          for name in OPENAI_API_KEY MINIMAX_API_KEY PUSHPLUS_TOKEN; do
+            if [ -n "${!name}" ]; then echo "$name: present"; else echo "$name: MISSING"; fi
+          done
+
+      - name: OpenAI live check (GET /v1/models)
+        if: env.OPENAI_API_KEY != ''
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer $OPENAI_API_KEY" \
+            https://api.openai.com/v1/models)
+          echo "OpenAI /v1/models HTTP: $code"
+          [ "$code" = "200" ]
+
+      - name: MiniMax live check (2-char TTS)
+        if: env.MINIMAX_API_KEY != ''
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          body = {
+              "model": "speech-2.8-hd",
+              "text": "测试",
+              "stream": False,
+              "voice_setting": {"voice_id": "audiobook_male_1", "speed": 1, "vol": 1, "pitch": 0},
+              "audio_setting": {"sample_rate": 32000, "bitrate": 128000, "format": "mp3", "channel": 1},
+          }
+          req = urllib.request.Request(
+              "https://api.minimax.cn/v1/t2a_v2",
+              data=json.dumps(body).encode(),
+              headers={
+                  "Authorization": f"Bearer {os.environ['MINIMAX_API_KEY']}",
+                  "Content-Type": "application/json",
+              },
+              method="POST",
+          )
+          with urllib.request.urlopen(req, timeout=60) as resp:
+              data = json.loads(resp.read())
+          base = data.get("base_resp", {})
+          print("MiniMax base_resp:", base.get("status_code"), base.get("status_msg"))
+          assert base.get("status_code") == 0, "MiniMax key did not pass the live check"
+          PY
