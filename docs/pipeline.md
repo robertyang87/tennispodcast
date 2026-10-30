@@ -77,5 +77,5 @@
   曾议 AI 前缀名（AI说网球/网球AI说）未采纳——品牌资产优先，前导音口播不改。
   2026-10-30 核查：Apple Podcasts 与小宇宙均无同名节目（注册时再终核）。
   英文名拼写待定：Tennis Jetlag（正词）vs 沿用社媒 handle 的 tennisjetleg。
-- [ ] 封面视觉（logo 概念 A 经线球 / B 声波球 / C 轨迹球，待所有者圈定）
+- [x] 封面视觉（2026-10-30 所有者定稿：不另起新 logo，复用视频版球标（球+时钟，tennislive `assets/logo/brand/icon.png`）；版式 = 蓝黑底 #080e1d + hero-glow #304d76 微光 + 球标居中 + 「网球时差」得意黑 + TENNIS JETLAG + 副题；顶部四色彩条不用；右下角球场线框试过、所有者以「干扰主体」否决。正式封面 `assets/cover.png`（3000×3000）. AI 生成的 A 经线球 / B 声波球 / C 轨迹球三概念归档不用。）
 - [ ] AI 生成音频的平台标注文案口径
