@@ -50,40 +50,75 @@ def post_json(url, headers, body, timeout=120):
         headers={"Content-Type": "application/json", **headers},
         method="POST",
     )
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
-        return json.loads(resp.read())
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")[:600]
+        raise RuntimeError(f"HTTP {e.code} from {url}: {detail}") from e
+
+
+def parse_script_json(text):
+    text = text.strip()
+    if text.startswith("```"):
+        text = text.strip("`")
+        if text.startswith("json"):
+            text = text[4:]
+    return json.loads(text)
 
 
 def write_script():
     key = os.environ["OPENAI_API_KEY"]
+    auth = {"Authorization": f"Bearer {key}"}
     models = ["gpt-6-luna", "gpt-5.6-luna"]
-    last_err = None
+    errors = []
     for model in models:
+        # Route 1: Chat Completions (no temperature: Luna-class reasoning
+        # models reject non-default temperature with HTTP 400).
         try:
             data = post_json(
                 "https://api.openai.com/v1/chat/completions",
-                {"Authorization": f"Bearer {key}"},
+                auth,
                 {
                     "model": model,
                     "messages": [
                         {"role": "system", "content": "你只输出 JSON。"},
                         {"role": "user", "content": PROMPT},
                     ],
-                    "temperature": 0.8,
                 },
             )
-            text = data["choices"][0]["message"]["content"].strip()
-            if text.startswith("```"):
-                text = text.strip("`")
-                if text.startswith("json"):
-                    text = text[4:]
-            obj = json.loads(text)
-            print(f"brain model used: {model}")
+            obj = parse_script_json(data["choices"][0]["message"]["content"])
+            print(f"brain used: {model} via chat/completions")
             return obj
-        except Exception as e:  # noqa: BLE001 - try next candidate model
-            print(f"model {model} failed: {e}", file=sys.stderr)
-            last_err = e
-    raise SystemExit(f"all brain models failed: {last_err}")
+        except Exception as e:  # noqa: BLE001
+            print(f"{model} chat/completions failed: {e}", file=sys.stderr)
+            errors.append(str(e))
+        # Route 2: Responses API.
+        try:
+            data = post_json(
+                "https://api.openai.com/v1/responses",
+                auth,
+                {
+                    "model": model,
+                    "instructions": "你只输出 JSON。",
+                    "input": PROMPT,
+                },
+            )
+            text = data.get("output_text")
+            if not text:
+                parts = []
+                for item in data.get("output", []):
+                    for c in item.get("content", []):
+                        if c.get("type") in ("output_text", "text"):
+                            parts.append(c.get("text", ""))
+                text = "".join(parts)
+            obj = parse_script_json(text)
+            print(f"brain used: {model} via responses")
+            return obj
+        except Exception as e:  # noqa: BLE001
+            print(f"{model} responses failed: {e}", file=sys.stderr)
+            errors.append(str(e))
+    raise SystemExit("all brain routes failed: " + " | ".join(errors))
 
 
 def synthesize(script, tone):
