@@ -324,6 +324,25 @@ def write_spec():
                      + json.dumps(obj, ensure_ascii=False)}])
         total = sum(len(s.get("display", "")) for s in obj["segments"])
         print(f"compressed chars: {total}")
+    short = []
+    for s in obj["segments"]:
+        lo, hi = TARGET_CHARS.get(s["id"], (0, 0))
+        if len(s.get("display", "")) < lo - 20:
+            short.append(f"{s['id']}（现 {len(s.get('display', ''))} 字，目标 {lo}-{hi} 字）")
+    if total < 3550 or short:
+        print(f"draft too short (total {total}); short segments: {short}")
+        obj = luna([{"role": "system", "content": "你只输出 JSON。"},
+                    {"role": "user", "content":
+                     "下面这份播客分段稿有几段写得太短。请只把这些段扩写到"
+                     "目标字数区间：" + "、".join(short) +
+                     "。扩写只许使用原稿事实卡里已有的事实做背景铺陈与语气连接，"
+                     "不许新增任何数字、比分、排名或人名，不许改动其他段，"
+                     "不许改分段 id 与顺序，保持每段 display/reading 双版与"
+                     "声音指令字段，reading 仍须全中文口语形态"
+                     "（无阿拉伯数字与英文）。只输出同样结构的 JSON 对象：\n"
+                     + json.dumps(obj, ensure_ascii=False)}])
+        total = sum(len(s.get("display", "")) for s in obj["segments"])
+        print(f"expanded chars: {total}")
     return obj
 
 
@@ -419,6 +438,13 @@ def main():
         flag = "" if lo - 40 <= len(s["display"]) <= hi + 40 else "  <-- off target"
         print(f"  {s['id']}: {len(s['display'])} chars (target {lo}-{hi}){flag}")
 
+    # Dump the spec immediately: if anything later fails, the artifact
+    # still carries it and the fix iteration can run MODE=from_spec.
+    with open(f"{OUT}/spec_ep001.json", "w", encoding="utf-8") as f:
+        json.dump({"title": TITLE, "episode": "EP001",
+                   "date": "2026-11-02", "segments": segs, "tone": tone},
+                  f, ensure_ascii=False, indent=2)
+
     # ---- synthesize + assemble narration with spec pauses ----------------
     parts = []
     report = []
@@ -483,7 +509,7 @@ def main():
     run("ffmpeg", "-y", "-i", narration, "-i", bed_full,
         "-filter_complex",
         "[1:a][0:a]sidechaincompress=threshold=0.02:ratio=6:attack=40:"
-        "release=400:makeup=0[bed];"
+        "release=400:makeup=1[bed];"
         "[0:a][bed]amix=inputs=2:duration=first:normalize=0[out]",
         "-map", "[out]", mixed)
     intro_wav = f"{WORK}/intro.wav"
