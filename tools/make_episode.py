@@ -522,7 +522,9 @@ def main():
             f.write(f"file '{os.path.abspath(p)}'\n")
     full = f"{WORK}/full.wav"
     run("ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", full_list, full)
-    run("ffmpeg", "-y", "-i", full, "-af", "loudnorm=I=-18:TP=-1.5:LRA=11",
+    # Single-pass loudnorm measured 0.76 LU under target on EP001's first
+    # master (-18.76 for I=-18), so the target is biased +0.8 to land ~-18.0.
+    run("ffmpeg", "-y", "-i", full, "-af", "loudnorm=I=-17.2:TP=-1.5:LRA=11",
         "-codec:a", "libmp3lame", "-b:a", "160k", f"{OUT}/ep001.mp3")
     total_seconds = probe_seconds(f"{OUT}/ep001.mp3")
     print(f"narration: {narration_seconds:.1f}s | episode total: {total_seconds:.1f}s")
