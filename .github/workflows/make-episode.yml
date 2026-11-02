@@ -1,0 +1,62 @@
+name: make-episode
+
+# EP001 production: Luna writes a matched spec (or MODE=from_spec reuses
+# a committed spec for QC fix iterations), MiniMax synthesizes, ffmpeg
+# mixes narration + original bed + intro-002, masters to -18 LUFS and
+# publishes a preview to the ep001-preview release. Never touches feed/.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "full = Luna writes spec; from_spec = reuse committed spec"
+        required: true
+        default: "full"
+        type: choice
+        options:
+          - full
+          - from_spec
+      spec_path:
+        description: "Spec JSON path in repo (from_spec mode only)"
+        required: false
+        default: ""
+      bgm_path:
+        description: "Music bed wav path in repo"
+        required: false
+        default: "assets/bgm/A_rally_groove.wav"
+
+permissions:
+  contents: write
+
+jobs:
+  episode:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+      MODE: ${{ inputs.mode }}
+      SPEC_PATH: ${{ inputs.spec_path }}
+      BGM_PATH: ${{ inputs.bgm_path }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg (not present on this runner image)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Produce episode
+        run: python3 tools/make_episode.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ep001-output
+          path: output/
+
+      - name: Publish preview to ep001-preview release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release view ep001-preview >/dev/null 2>&1 || \
+            gh release create ep001-preview --title "EP001 试听版（未发布）" \
+              --notes "早班车｜兹韦列夫登顶世界第一：是加冕，还是捡漏？——试听版，仅供审听，不进 feed。"
+          gh release upload ep001-preview output/ep001.mp3 output/script.md output/spec_ep001.json output/mix_report.json --clobber
