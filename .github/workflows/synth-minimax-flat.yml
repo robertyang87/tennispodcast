@@ -1,0 +1,43 @@
+name: synth-minimax-flat
+
+# EP001 MiniMax flat (no-emotion) comparison: synthesis ONLY.
+# Produces raw segment mp3s as an artifact; assembly/mastering/QC run
+# locally. Never touches feed/ and never publishes a release.
+
+on:
+  workflow_dispatch:
+    inputs:
+      spec_path:
+        description: "Spec JSON path in repo"
+        required: false
+        default: "specs/ep001_spec_minimax_flat.json"
+      only_segs:
+        description: "Comma list of segment ids to (re)synthesize; empty = all"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  synth:
+    runs-on: ubuntu-latest
+    env:
+      MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+      SPEC_PATH: ${{ inputs.spec_path }}
+      ONLY_SEGS: ${{ inputs.only_segs }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg (not present on this runner image)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Synthesize segments (MiniMax, emotion off)
+        run: python3 tools/synth_minimax_flat.py
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: minimax-flat-output
+          path: output/
