@@ -20,7 +20,7 @@ def pin(text):
 results = {}
 for s in spec["segments"]:
     sid = s["id"]; r = rep[sid]
-    sl = f"/tmp/qc_slices_mm/{sid}.wav"
+    sl = f"/tmp/qc_slices_runner/{sid}.wav"
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", f"{r['start']:.2f}",
                     "-t", f"{r['seg_seconds']:.2f}",
                     "-i", f"{BASE}/qc-staging/ep001_minimax_flat.mp3",
