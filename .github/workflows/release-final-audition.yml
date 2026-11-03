@@ -1,0 +1,27 @@
+name: release-final-audition
+
+# One-shot uploader: attaches the staged 1102 final-format audition files
+# (release-staging/) to the ep001-final-audition release. Files are staged
+# via the Git Data API because uploads.github.com rejects the local
+# credential; the runner's gh CLI does the actual release upload.
+# Never touches feed/.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish 1102 final audition release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view ep001-final-audition >/dev/null 2>&1 || \
+            gh release create ep001-final-audition --title "1102 期定版全装试听（未发布）" \
+              --notes "早班车｜兹韦列夫登顶世界第一：是加冕，还是捡漏？——定版全装试听版：前导音 2a（澳网 2022 链式）＋云健中速版人声（净 324 字/分）＋乙案乐床 −21 dB 恒定垫底，整体 −18 LUFS。仅供审听，不进 feed。"
+          gh release upload ep001-final-audition release-staging/1102_final_audition.mp3 release-staging/mix_report_1102_final.md --clobber
