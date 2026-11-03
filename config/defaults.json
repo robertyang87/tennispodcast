@@ -1,92 +1,112 @@
 {
-  "_note": "生产默认音色已定案（2026-11-02 所有者拍板）：edge-tts 云健。MiniMax 温润男声在 EP001 试听版被判「声音太怪了」，降为备选。发音考卷盲测仍待跑，只用于修订备选池；生产不硬绑任何一家，引擎层必须可替换。",
-  "edge_tts": {
-    "decided": "2026-11-02 所有者定案：EP001 试听版否掉 MiniMax 温润男声（「声音太怪了」）后改用云健，与视频线既定旁白音色同源",
-    "emotion": "不用（平叙；EP001 原版 MiniMax 的逐段 emotion 标记一并取消）",
-    "engine": "edge-tts（本地 raw-socket 管线 ~/workspace/edge-tts-local，或 runner 官方库）",
-    "pitch": "+0Hz",
-    "pronunciation": "只靠 spec 的 reading 文本（全中文口语形态），不另加词典",
-    "rate": "定版口径（2026-11-03 所有者定：播客语速与网球时差视频配音一致）：整体净语速对齐视频线实测——兹韦列夫期（故事线标准档 +18%）Release 实际配音快照 27 条旁白引擎词边界实测 364 字/分（梅德韦杰夫期 +10% 实测 321 字/分）；逐段在基准上等比提速、保持相对档位（赛果最快/话题中/数据段 S3f 最慢），EP001 提速版实测净语速 366 字/分、含停顿 352 字/分",
-    "voice": "zh-CN-YunjianNeural",
-    "voice_name": "云健（沉稳男声）",
-    "pace_standard": {
-      "decided": "2026-11-03 所有者：EP001 云健版约 270 字/分仍判慢，播客语速自此对齐视频线",
-      "target_net_chars_per_min": 364,
-      "measured_basis": "tennislive Release reel-tts-zverev-no1-story-2026 实际配音快照 bundle：1600 字 / 词边界净时长 263.4s = 364 字/分（rate +18%）；交叉样本 medvedev-story 旁白本体 3155 字 / 净 590.3s = 321 字/分（rate +10%）",
-      "ep001_fast_segment_rates": {
-        "S0a": "+12%",
-        "S0b": "+30%",
-        "S1_1": "+34%",
-        "S1_2": "+41%",
-        "S1_3": "+27%",
-        "S1_4": "+30%",
-        "S1_5": "+34%",
-        "S2": "+34%",
-        "S3a": "+19%",
-        "S3b": "+28%",
-        "S3c": "+11%",
-        "S3d": "+19%",
-        "S3e": "+22%",
-        "S3f": "+18%",
-        "S3g": "+9%",
-        "S4a": "+29%",
-        "S4b": "+17%"
-      },
-      "ep001_fast_measured": "净语速 366 字/分；含停顿 352 字/分；总时长 635.2s；-18.00 LUFS"
-    }
-  },
-  "exam_alternates": [
-    {
-      "engine": "minimax",
-      "model": "speech-02-hd",
-      "reason": "官方定位节奏与稳定性优先；若 2.8-hd 长句出现漂移/幻觉，用它兜底对照",
-      "voice_id": "Chinese (Mandarin)_Gentleman"
-    },
-    {
-      "engine": "minimax",
-      "model": "speech-2.8-hd",
-      "reason": "同模型换播报型音色，测赛后复盘栏目的适配度",
-      "voice_id": "Chinese (Mandarin)_Radio_Host"
-    },
-    {
-      "engine": "openai",
-      "model": "gpt-4o-mini-tts",
-      "reason": "官方推荐音质最好的两个声音之二",
-      "voice": "cedar"
-    }
-  ],
-  "minimax": {
-    "_status": "备选（2026-11-02 降级：EP001 试听版音色被所有者判「声音太怪了」）",
-    "audio_setting": {
-      "bitrate": 128000,
-      "channel": 1,
-      "format": "mp3",
-      "sample_rate": 32000
-    },
-    "emotion": "auto（不锁死，逐段在 spec 里标；锁单一情感会压平叙事弧线）",
-    "endpoint": "https://api.minimax.cn/v1/t2a_v2",
-    "model": "speech-2.8-hd",
-    "pitch": 0,
-    "pronunciation_dict": "spec 级传入：网球发音词库（球员名+术语，带声调拼音）",
-    "speed": 1.0,
-    "voice_id": "Chinese (Mandarin)_Gentleman",
-    "voice_id_name": "温润男声（官方目录定位：叙事/讲故事）"
-  },
-  "openai": {
-    "instructions_default": "你是一位懂网球的中文播客主持人。语气自然、沉稳但有热情，像跟朋友讲故事，不要播音腔。重读比分、转折和关键数字，句间留自然停顿，长句在逗号处轻停。",
-    "model": "gpt-4o-mini-tts",
-    "role": "对照组 TTS + 写稿标注（GPT）+ 回听转写（Whisper）；其 TTS 模型官方已定 2027-01-06 关停，不作生产硬绑",
-    "speed": 1.0,
-    "voice": "marin"
-  },
-  "production_tts": {
-    "engine": "edge_tts",
-    "voice": "zh-CN-YunjianNeural"
-  },
-  "show": {
-    "decided": "2026-10-30 所有者定案（AI 前缀备选名未采纳）",
-    "name": "网球时差",
-    "name_check": "2026-10-30 Apple Podcasts 与小宇宙均无同名节目",
-    "tagline": "听见球场另一边"
+ "_note": "生产默认音色已定案（2026-11-02 所有者拍板）：edge-tts 云健。MiniMax 温润男声在 EP001 试听版被判「声音太怪了」，降为备选。发音考卷盲测仍待跑，只用于修订备选池；生产不硬绑任何一家，引擎层必须可替换。",
+ "edge_tts": {
+  "decided": "2026-11-02 所有者定案：EP001 试听版否掉 MiniMax 温润男声（「声音太怪了」）后改用云健，与视频线既定旁白音色同源",
+  "emotion": "不用（平叙；EP001 原版 MiniMax 的逐段 emotion 标记一并取消）",
+  "engine": "edge-tts（本地 raw-socket 管线 ~/workspace/edge-tts-local，或 runner 官方库）",
+  "pitch": "+0Hz",
+  "pronunciation": "只靠 spec 的 reading 文本（全中文口语形态），不另加词典",
+  "rate": "播客独立定档（2026-11-03 所有者耳判定）：目标整体净语速约 320 字/分——提速版按早间『与视频配音同速』口径做到净 366 字/分，被所有者耳判太快；播客语速自此独立于视频线、慢于视频旁白。逐段以提速版实测修剪时长等比放慢（系数 366/320≈1.14）、保持相对档位（赛果最快/话题中/数据段 S3f 最慢）；1102 中速版实测净语速 324 字/分、含停顿 313 字/分。本值待所有者耳判最终锁定。",
+  "voice": "zh-CN-YunjianNeural",
+  "voice_name": "云健（沉稳男声）",
+  "pace_standard": {
+   "decided": "2026-11-03 所有者耳判：提速版（净 366 字/分）太快——播客语速独立定档、慢于视频旁白，目标净语速约 320 字/分（介于原版 282 与提速版 366 之间、偏舒适侧）；原『与视频配音同速』口径（2026-11-03 早间定）作废。本值待所有者耳判最终锁定。",
+   "target_net_chars_per_min": 320,
+   "measured_basis": "中速版基数：EP001 提速版逐段实测修剪时长（3723 字 / 610.4s = 净 366 字/分）×1.1436 等比放慢，逐段解 rate 一次合成、偏差 ≤4% 纠偏。（历史对照，不再作目标：视频线兹韦列夫期旁白快照实测 364 字/分、梅德韦杰夫期 321 字/分。）",
+   "ep001_fast_segment_rates": {
+    "S0a": "+12%",
+    "S0b": "+30%",
+    "S1_1": "+34%",
+    "S1_2": "+41%",
+    "S1_3": "+27%",
+    "S1_4": "+30%",
+    "S1_5": "+34%",
+    "S2": "+34%",
+    "S3a": "+19%",
+    "S3b": "+28%",
+    "S3c": "+11%",
+    "S3d": "+19%",
+    "S3e": "+22%",
+    "S3f": "+18%",
+    "S3g": "+9%",
+    "S4a": "+29%",
+    "S4b": "+17%"
+   },
+   "ep001_fast_measured": "净语速 366 字/分；含停顿 352 字/分；总时长 635.2s；-18.00 LUFS",
+   "ep001_mid_segment_rates": {
+    "S0a": "-2%",
+    "S0b": "+16%",
+    "S1_1": "+19%",
+    "S1_2": "+27%",
+    "S1_3": "+11%",
+    "S1_4": "+16%",
+    "S1_5": "+19%",
+    "S2": "+18%",
+    "S3a": "+4%",
+    "S3b": "+13%",
+    "S3c": "-5%",
+    "S3d": "+4%",
+    "S3e": "+10%",
+    "S3f": "+5%",
+    "S3g": "-5%",
+    "S4a": "+17%",
+    "S4b": "+2%"
+   },
+   "ep001_mid_measured": "净语速 324 字/分；含停顿 313 字/分；总时长 714.3s；-18.0 LUFS；段间停顿实测全 1.90s、结尾问题后 2.70s"
   }
+ },
+ "exam_alternates": [
+  {
+   "engine": "minimax",
+   "model": "speech-02-hd",
+   "reason": "官方定位节奏与稳定性优先；若 2.8-hd 长句出现漂移/幻觉，用它兜底对照",
+   "voice_id": "Chinese (Mandarin)_Gentleman"
+  },
+  {
+   "engine": "minimax",
+   "model": "speech-2.8-hd",
+   "reason": "同模型换播报型音色，测赛后复盘栏目的适配度",
+   "voice_id": "Chinese (Mandarin)_Radio_Host"
+  },
+  {
+   "engine": "openai",
+   "model": "gpt-4o-mini-tts",
+   "reason": "官方推荐音质最好的两个声音之二",
+   "voice": "cedar"
+  }
+ ],
+ "minimax": {
+  "_status": "备选（2026-11-02 降级：EP001 试听版音色被所有者判「声音太怪了」）",
+  "audio_setting": {
+   "bitrate": 128000,
+   "channel": 1,
+   "format": "mp3",
+   "sample_rate": 32000
+  },
+  "emotion": "auto（不锁死，逐段在 spec 里标；锁单一情感会压平叙事弧线）",
+  "endpoint": "https://api.minimax.cn/v1/t2a_v2",
+  "model": "speech-2.8-hd",
+  "pitch": 0,
+  "pronunciation_dict": "spec 级传入：网球发音词库（球员名+术语，带声调拼音）",
+  "speed": 1.0,
+  "voice_id": "Chinese (Mandarin)_Gentleman",
+  "voice_id_name": "温润男声（官方目录定位：叙事/讲故事）"
+ },
+ "openai": {
+  "instructions_default": "你是一位懂网球的中文播客主持人。语气自然、沉稳但有热情，像跟朋友讲故事，不要播音腔。重读比分、转折和关键数字，句间留自然停顿，长句在逗号处轻停。",
+  "model": "gpt-4o-mini-tts",
+  "role": "对照组 TTS + 写稿标注（GPT）+ 回听转写（Whisper）；其 TTS 模型官方已定 2027-01-06 关停，不作生产硬绑",
+  "speed": 1.0,
+  "voice": "marin"
+ },
+ "production_tts": {
+  "engine": "edge_tts",
+  "voice": "zh-CN-YunjianNeural"
+ },
+ "show": {
+  "decided": "2026-10-30 所有者定案（AI 前缀备选名未采纳）",
+  "name": "网球时差",
+  "name_check": "2026-10-30 Apple Podcasts 与小宇宙均无同名节目",
+  "tagline": "听见球场另一边"
+ }
 }
