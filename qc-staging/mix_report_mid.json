@@ -1,0 +1,176 @@
+{
+  "narration_seconds": 714.3,
+  "episode_seconds": 714.3,
+  "segments": [
+    {
+      "id": "S0a",
+      "start": 0.0,
+      "end": 39.17,
+      "seg_seconds": 39.17,
+      "rate": "-2%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S0b",
+      "start": 40.67,
+      "end": 79.86,
+      "seg_seconds": 39.19,
+      "rate": "+16%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S1_1",
+      "start": 81.36,
+      "end": 127.9,
+      "seg_seconds": 46.54,
+      "rate": "+19%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S1_2",
+      "start": 129.4,
+      "end": 170.1,
+      "seg_seconds": 40.69,
+      "rate": "+27%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S1_3",
+      "start": 171.6,
+      "end": 223.97,
+      "seg_seconds": 52.38,
+      "rate": "+11%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S1_4",
+      "start": 225.47,
+      "end": 265.76,
+      "seg_seconds": 40.29,
+      "rate": "+16%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S1_5",
+      "start": 267.26,
+      "end": 316.53,
+      "seg_seconds": 49.26,
+      "rate": "+19%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S2",
+      "start": 318.03,
+      "end": 349.63,
+      "seg_seconds": 31.6,
+      "rate": "+18%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S3a",
+      "start": 351.13,
+      "end": 398.75,
+      "seg_seconds": 47.62,
+      "rate": "+4%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S3b",
+      "start": 400.25,
+      "end": 460.69,
+      "seg_seconds": 60.44,
+      "rate": "+13%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S3c",
+      "start": 462.19,
+      "end": 480.42,
+      "seg_seconds": 18.24,
+      "rate": "-5%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S3d",
+      "start": 481.92,
+      "end": 537.34,
+      "seg_seconds": 55.41,
+      "rate": "+4%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S3e",
+      "start": 538.84,
+      "end": 590.16,
+      "seg_seconds": 51.33,
+      "rate": "+10%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S3f",
+      "start": 591.66,
+      "end": 654.71,
+      "seg_seconds": 63.05,
+      "rate": "+5%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S3g",
+      "start": 656.21,
+      "end": 680.39,
+      "seg_seconds": 24.18,
+      "rate": "-5%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 1.5
+    },
+    {
+      "id": "S4a",
+      "start": 681.89,
+      "end": 696.3,
+      "seg_seconds": 14.41,
+      "rate": "+17%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 2.3
+    },
+    {
+      "id": "S4b",
+      "start": 698.6,
+      "end": 714.27,
+      "seg_seconds": 15.66,
+      "rate": "+2%",
+      "bed": "none",
+      "emotion": null,
+      "pause_after_inserted": 0.0
+    }
+  ]
+}
