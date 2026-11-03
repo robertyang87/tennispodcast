@@ -55,6 +55,11 @@
    "ep001_mid_measured": "净语速 324 字/分；含停顿 313 字/分；总时长 714.3s；-18.0 LUFS；段间停顿实测全 1.90s、结尾问题后 2.70s"
   }
  },
+ "bgm": {
+  "bed": "乙案轻音乐床（bed_B_music.wav，声动式恒定电平垫底）",
+  "level_db_relative_to_voice": -21,
+  "decided": "2026-11-03 所有者定档 −21 dB（相对人声、恒定电平、无闪避）"
+ },
  "exam_alternates": [
   {
    "engine": "minimax",
