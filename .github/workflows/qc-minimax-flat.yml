@@ -1,0 +1,35 @@
+name: qc-minimax-flat
+
+# One-shot QC runner for the EP001 MiniMax flat comparison: transcribes the
+# staged episode (qc-staging/) segment-by-segment with faster-whisper
+# (medium, int8, beam 5 + VAD — same settings as the local QC rounds) and
+# uploads the pinyin-ratio results as an artifact. Exists because the local
+# VM was saturated by unrelated training jobs; the runner gives the QC an
+# uncontended CPU. Inputs are staged via the Git Data API and removed after.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install QC deps
+        run: pip install faster-whisper==1.2.1 ctranslate2==4.8.4 pypinyin==0.55.0
+      - name: Run whisper QC
+        env:
+          QC_BASE: ${{ github.workspace }}
+        run: python tools/qc_whisper_runner.py
+      - name: Upload QC results
+        uses: actions/upload-artifact@v4
+        with:
+          name: minimax-flat-qc
+          path: qc-staging/qc_whisper_minimax_flat.json
