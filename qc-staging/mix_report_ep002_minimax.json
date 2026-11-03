@@ -1,0 +1,91 @@
+{
+  "narration_seconds": 667.73,
+  "speech_seconds": 639.73,
+  "segments": [
+    {
+      "id": "S0a",
+      "start": 0.0,
+      "seg_seconds": 34.74
+    },
+    {
+      "id": "S0b",
+      "start": 36.44,
+      "seg_seconds": 35.8
+    },
+    {
+      "id": "S1_1",
+      "start": 73.94,
+      "seg_seconds": 44.12
+    },
+    {
+      "id": "S1_2",
+      "start": 119.76,
+      "seg_seconds": 34.18
+    },
+    {
+      "id": "S1_3",
+      "start": 155.64,
+      "seg_seconds": 37.64
+    },
+    {
+      "id": "S1_4",
+      "start": 194.98,
+      "seg_seconds": 38.86
+    },
+    {
+      "id": "S1_5",
+      "start": 235.55,
+      "seg_seconds": 36.13
+    },
+    {
+      "id": "S2",
+      "start": 273.37,
+      "seg_seconds": 48.24
+    },
+    {
+      "id": "S3a",
+      "start": 323.31,
+      "seg_seconds": 40.99
+    },
+    {
+      "id": "S3b",
+      "start": 366.0,
+      "seg_seconds": 50.01
+    },
+    {
+      "id": "S3c",
+      "start": 417.71,
+      "seg_seconds": 14.83
+    },
+    {
+      "id": "S3d",
+      "start": 434.24,
+      "seg_seconds": 48.73
+    },
+    {
+      "id": "S3e",
+      "start": 484.67,
+      "seg_seconds": 66.15
+    },
+    {
+      "id": "S3f",
+      "start": 552.52,
+      "seg_seconds": 50.46
+    },
+    {
+      "id": "S3g",
+      "start": 604.67,
+      "seg_seconds": 28.17
+    },
+    {
+      "id": "S4a",
+      "start": 634.55,
+      "seg_seconds": 18.49
+    },
+    {
+      "id": "S4b",
+      "start": 655.53,
+      "seg_seconds": 12.2
+    }
+  ]
+}
