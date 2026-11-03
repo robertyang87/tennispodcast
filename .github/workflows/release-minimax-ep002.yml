@@ -1,0 +1,28 @@
+name: release-minimax-ep002
+
+# One-shot uploader: attaches the staged EP002 MiniMax audition files
+# (release-staging/) to the ep002-1103-preview-minimax release. The files
+# are produced via the synth-minimax-flat runner workflow + local
+# assembly, and staged via the Git Data API because uploads.github.com
+# rejects the local credential; the runner's gh CLI does the actual
+# release upload. Never touches feed/.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish EP002 MiniMax preview release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view ep002-1103-preview-minimax >/dev/null 2>&1 || \
+            gh release create ep002-1103-preview-minimax --title "EP002 MiniMax 试听版（未发布）" \
+              --notes "早班车｜德约的生死首轮：输给瓦舍罗，都灵就没了？——MiniMax speech-2.8-hd＋温润男声无情绪试听版（1103 期），仅供审听，不进 feed。"
+          gh release upload ep002-1103-preview-minimax release-staging/ep002_minimax.mp3 release-staging/qc_summary_minimax.md --clobber
