@@ -54,5 +54,16 @@
       <itunes:explicit>false</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
+    <item>
+      <title>1105｜续了一天命，德约赛季还是结束了？</title>
+      <description>昨日巴黎一日冷门：德约输球赛季结束，兹韦列夫首战出局，德米纳尔无缘都灵；阿尔卡拉斯稳住晋级；今日看点与都灵最后两个席位形势；深聊德约昨天拼来的一天到底值不值。本节目由 AI 语音播报，赛果与数据经人工核对。</description>
+      <pubDate>Wed, 04 Nov 2026 23:30:00 GMT</pubDate>
+      <guid isPermaLink="false">tennispodcast-1105</guid>
+      <enclosure url="https://robertyang87.github.io/tennispodcast/1105.mp3" length="17109203" type="audio/mpeg"/>
+      <itunes:duration>00:11:53</itunes:duration>
+      <itunes:summary>昨日巴黎一日冷门：德约输球赛季结束，兹韦列夫首战出局，德米纳尔无缘都灵；阿尔卡拉斯稳住晋级；今日看点与都灵最后两个席位形势；深聊德约昨天拼来的一天到底值不值。本节目由 AI 语音播报，赛果与数据经人工核对。</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
   </channel>
 </rss>
