@@ -43,5 +43,27 @@
     </itunes:category>
     <itunes:type>episodic</itunes:type>
     <itunes:explicit>false</itunes:explicit>
+    <item>
+      <title>1104｜德约死里逃生，续命成功了吗？</title>
+      <description>昨日巴黎与香港赛果速览；今日巴黎赛程与都灵积分线最新形势；深聊德约科维奇逆转瓦舍罗的死里逃生——怎么活过来的、为什么还不算续命成功、这场胜利到底有多硬。本节目由 AI 语音播报，赛果与数据经人工核对。</description>
+      <pubDate>Tue, 03 Nov 2026 22:24:00 GMT</pubDate>
+      <guid isPermaLink="false">tennispodcast-1104</guid>
+      <enclosure url="https://robertyang87.github.io/tennispodcast/1104.mp3" length="16687900" type="audio/mpeg"/>
+      <itunes:duration>00:11:35</itunes:duration>
+      <itunes:summary>昨日巴黎与香港赛果速览；今日巴黎赛程与都灵积分线最新形势；深聊德约科维奇逆转瓦舍罗的死里逃生——怎么活过来的、为什么还不算续命成功、这场胜利到底有多硬。本节目由 AI 语音播报，赛果与数据经人工核对。</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>1105｜续了一天命，德约赛季还是结束了？</title>
+      <description>昨日巴黎一日冷门：德约输球赛季结束，兹韦列夫首战出局，德米纳尔无缘都灵；阿尔卡拉斯稳住晋级；今日看点与都灵最后两个席位形势；深聊德约昨天拼来的一天到底值不值。本节目由 AI 语音播报，赛果与数据经人工核对。</description>
+      <pubDate>Wed, 04 Nov 2026 23:30:00 GMT</pubDate>
+      <guid isPermaLink="false">tennispodcast-1105</guid>
+      <enclosure url="https://robertyang87.github.io/tennispodcast/1105.mp3" length="17109203" type="audio/mpeg"/>
+      <itunes:duration>00:11:53</itunes:duration>
+      <itunes:summary>昨日巴黎一日冷门：德约输球赛季结束，兹韦列夫首战出局，德米纳尔无缘都灵；阿尔卡拉斯稳住晋级；今日看点与都灵最后两个席位形势；深聊德约昨天拼来的一天到底值不值。本节目由 AI 语音播报，赛果与数据经人工核对。</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
   </channel>
 </rss>
