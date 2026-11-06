@@ -76,5 +76,16 @@
       <itunes:explicit>false</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
+    <item>
+      <title>1107｜都灵门票，凭什么归霍达尔？</title>
+      <description>昨日巴黎：谢尔顿赢保罗送蒂亚福进都灵，范阿舍逆转土方凛辉首进大师赛四强，阿尔卡拉斯逆转弗里茨、霍达尔锁定都灵最后一张门票；香港伊埃拉再赢一场进四强、锁定生涯新高；深聊都灵八人名单：霍达尔一场没打拿走最后一张门票。本节目由 AI 语音播报，赛果与数据经人工核对。</description>
+      <pubDate>Fri, 06 Nov 2026 23:30:00 GMT</pubDate>
+      <guid isPermaLink="false">tennispodcast-1107</guid>
+      <enclosure url="https://robertyang87.github.io/tennispodcast/1107.mp3" length="16808899" type="audio/mpeg"/>
+      <itunes:duration>00:11:40</itunes:duration>
+      <itunes:summary>昨日巴黎：谢尔顿赢保罗送蒂亚福进都灵，范阿舍逆转土方凛辉首进大师赛四强，阿尔卡拉斯逆转弗里茨、霍达尔锁定都灵最后一张门票；香港伊埃拉再赢一场进四强、锁定生涯新高；深聊都灵八人名单：霍达尔一场没打拿走最后一张门票。本节目由 AI 语音播报，赛果与数据经人工核对。</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
   </channel>
 </rss>
