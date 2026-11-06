@@ -5,7 +5,7 @@
   "emotion": "不用（平叙；EP001 原版 MiniMax 的逐段 emotion 标记一并取消）",
   "engine": "edge-tts（本地 raw-socket 管线 ~/workspace/edge-tts-local，或 runner 官方库）",
   "pitch": "+0Hz",
-  "pronunciation": "只靠 spec 的 reading 文本（全中文口语形态），不另加词典",
+  "pronunciation": "合成前必过机器预检：pypinyin 静态扫描（对齐 tennislive tools/check_polyphones.py）＋三张共享表（pronounce.py 换字表 HOMOPHONES、check_polyphones 的 INTENDED 规则、zh/tts_fake_words.py 假词表，命中假词改句式去歧义）＋播客自有词典 config/pronunciation.json（历期确认定音逐期回写）；扫描报出的多音字未决项必须为零、25 字以上无标点长句必须为零，才许合成。球员中文名一律用 tennislive 定名表（zh/players.py 的 PLAYER_ZH＋player_names_top500.json＋data/player_name_overrides.json），不许自创音译。",
   "rate": "播客独立定档（2026-11-03 所有者耳判定）：目标整体净语速约 320 字/分——提速版按早间『与视频配音同速』口径做到净 366 字/分，被所有者耳判太快；播客语速自此独立于视频线、慢于视频旁白。逐段以提速版实测修剪时长等比放慢（系数 366/320≈1.14）、保持相对档位（赛果最快/话题中/数据段 S3f 最慢）；1102 中速版实测净语速 324 字/分、含停顿 313 字/分。2026-11-03 所有者耳判中速版通过，净 320 字/分正式锁定（中速版实测 324）。",
   "voice": "zh-CN-YunjianNeural",
   "voice_name": "云健（沉稳男声）",
