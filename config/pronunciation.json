@@ -1,0 +1,49 @@
+{
+  "_note": "播客自有定音词典（2026-11-06 所有者令建）：历期质检确认过的多音字定音、换字与改写规则，发布时逐期回写累积，同一个词不许错第二遍。写稿与三查前必查；与 tennislive 三表叠加使用：src/tennislive/video/pronounce.py 的 HOMOPHONES 换字表、tools/check_polyphones.py 的 INTENDED 手校规则、src/tennislive/zh/tts_fake_words.py 的 FAKE_WORDS 假词表。",
+  "reading_overrides": [
+    {
+      "display": "伊埃拉",
+      "reading": "伊艾拉",
+      "reason": "「埃」连读弱化，回听被听成「伊拉拉」；孤立测试证实",
+      "source_episode": "1104",
+      "verified": "1104、1105 两期孤立测试＋全段回听均正确还原"
+    }
+  ],
+  "pinyin_pins": [
+    {
+      "word": "还",
+      "pinyin": "hai2",
+      "source_episode": "1103"
+    },
+    {
+      "word": "差",
+      "pinyin": "cha4",
+      "source_episode": "1103"
+    },
+    {
+      "word": "重演",
+      "pinyin": "chong2yan3",
+      "source_episode": "1103"
+    }
+  ],
+  "rewrite_rules": [
+    {
+      "banned_in_reading": "以逸待劳",
+      "reason": "1106 期三处回听均被听作「一意代劳」，听感上不是成语",
+      "fix": "改写为白话句（1106 实际改法：S1_3「现在，他休息够了，下一场对阵弗里茨。」/ S3e「阿尔卡拉斯是等着打的：」/ S4a「还是体能满格的阿尔卡拉斯，继续冲赛季第五冠？」）",
+      "source_episode": "1106"
+    },
+    {
+      "pattern": "比分句与用时句粘连",
+      "reason": "「…六比三收尾，全场用时一小时四十二分钟」被稳定听成「十一小时」",
+      "fix": "两句之间用句号断开",
+      "source_episode": "1105"
+    },
+    {
+      "pattern": "两位数分钟数（八十六分钟类）",
+      "reason": "1103 期实测「八十六分钟」被吞成「十六分钟」",
+      "fix": "数字专项核验必查此类；确认吞字时改写句式并只重合成该段",
+      "source_episode": "1103"
+    }
+  ]
+}
