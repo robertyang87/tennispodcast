@@ -52,6 +52,16 @@
       "audio_bytes": 16808899,
       "duration": "00:11:40",
       "episode_type": "full"
+    },
+    {
+      "title": "1108｜卫冕冠军退赛，总决赛还好看吗？",
+      "description": "昨日巴黎：鲁德赢博尔热斯，谢尔顿逆转范阿舍、阿尔卡拉斯轻取鲁德，决赛对阵出炉；香港伊埃拉雨战赢萨卡里、刘婧文一盘未丢进决赛；深聊总决赛开打前夜：卫冕冠军莱巴金娜因病毒性疾病退赛，科斯秋克顶替出战。本节目由 AI 语音播报，赛果与数据经人工核对。",
+      "pub_date": "2026-11-08T07:30:00+08:00",
+      "guid": "tennispodcast-1108",
+      "audio_url": "https://robertyang87.github.io/tennispodcast/1108.mp3",
+      "audio_bytes": 16844635,
+      "duration": "00:11:42",
+      "episode_type": "full"
     }
   ]
 }
