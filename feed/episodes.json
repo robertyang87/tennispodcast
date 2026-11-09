@@ -72,6 +72,16 @@
       "audio_bytes": 16835231,
       "duration": "00:11:41",
       "episode_type": "full"
+    },
+    {
+      "title": "1110｜高芙赢了德比，年终第四稳了吗？",
+      "description": "昨天总决赛第一天：高芙 6-4、6-7(5)、6-2 赢佩古拉，拿下美国德比；诺斯科娃 6-2、6-4 赢科斯秋克，首秀开门红；双打两场打完；深聊高芙这场胜利：德比怎么赢的、203 分怎么算的、两组接下来还有什么悬念。本节目由 AI 语音播报，赛果与数据经人工核对。",
+      "pub_date": "2026-11-10T07:30:00+08:00",
+      "guid": "tennispodcast-1110",
+      "audio_url": "https://robertyang87.github.io/tennispodcast/1110.mp3",
+      "audio_bytes": 17223306,
+      "duration": "00:11:58",
+      "episode_type": "full"
     }
   ]
 }
