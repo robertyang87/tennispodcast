@@ -94,6 +94,56 @@
       "word": "普罗佐罗娃",
       "pinyin": "pu3 luo2 zuo3 luo2 wa2",
       "source_episode": "1109"
+    },
+    {
+      "word": "西尼亚科娃",
+      "pinyin": "xi1 ni2 ya4 ke1 wa2",
+      "source_episode": "1110"
+    },
+    {
+      "word": "汤森德",
+      "pinyin": "tang1 sen1 de2",
+      "source_episode": "1110"
+    },
+    {
+      "word": "布克沙",
+      "pinyin": "bu4 ke4 sha1",
+      "source_episode": "1110"
+    },
+    {
+      "word": "梅利哈尔-马丁内斯",
+      "pinyin": "mei2 li4 ha1 er3 ma3 ding1 nei4 si1",
+      "source_episode": "1110"
+    },
+    {
+      "word": "佩雷斯",
+      "pinyin": "pei4 lei2 si1",
+      "source_episode": "1110"
+    },
+    {
+      "word": "舒尔斯",
+      "pinyin": "shu1 er3 si1",
+      "source_episode": "1110"
+    },
+    {
+      "word": "埃拉尼",
+      "pinyin": "ai1 la1 ni2",
+      "source_episode": "1110"
+    },
+    {
+      "word": "保利尼",
+      "pinyin": "bao3 li4 ni2",
+      "source_episode": "1110"
+    },
+    {
+      "word": "穆霍娃",
+      "pinyin": "mu4 huo4 wa2",
+      "source_episode": "1110"
+    },
+    {
+      "word": "萨巴伦卡",
+      "pinyin": "sa4 ba1 lun2 ka3",
+      "source_episode": "1110"
     }
   ],
   "rewrite_rules": [
@@ -114,6 +164,12 @@
       "reason": "1103 期实测「八十六分钟」被吞成「十六分钟」",
       "fix": "数字专项核验必查此类；确认吞字时改写句式并只重合成该段",
       "source_episode": "1103"
+    },
+    {
+      "banned_in_reading": "得给",
+      "reason": "1110 期「得给自己多打打气」的「得」为必须义 děi，与轻声 de / dé 混淆风险高，TTS 易读错",
+      "fix": "改写为「要给」（1110 实际改法：S1_3「要给自己多打打气」）",
+      "source_episode": "1110"
     }
   ]
 }
