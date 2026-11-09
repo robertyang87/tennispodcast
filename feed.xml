@@ -109,5 +109,16 @@
       <itunes:explicit>false</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
+    <item>
+      <title>1110｜高芙赢了德比，年终第四稳了吗？</title>
+      <description>昨天总决赛第一天：高芙 6-4、6-7(5)、6-2 赢佩古拉，拿下美国德比；诺斯科娃 6-2、6-4 赢科斯秋克，首秀开门红；双打两场打完；深聊高芙这场胜利：德比怎么赢的、203 分怎么算的、两组接下来还有什么悬念。本节目由 AI 语音播报，赛果与数据经人工核对。</description>
+      <pubDate>Mon, 09 Nov 2026 23:30:00 GMT</pubDate>
+      <guid isPermaLink="false">tennispodcast-1110</guid>
+      <enclosure url="https://robertyang87.github.io/tennispodcast/1110.mp3" length="17223306" type="audio/mpeg"/>
+      <itunes:duration>00:11:58</itunes:duration>
+      <itunes:summary>昨天总决赛第一天：高芙 6-4、6-7(5)、6-2 赢佩古拉，拿下美国德比；诺斯科娃 6-2、6-4 赢科斯秋克，首秀开门红；双打两场打完；深聊高芙这场胜利：德比怎么赢的、203 分怎么算的、两组接下来还有什么悬念。本节目由 AI 语音播报，赛果与数据经人工核对。</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
   </channel>
 </rss>
