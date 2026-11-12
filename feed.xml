@@ -142,5 +142,16 @@
       <itunes:explicit>false</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
+    <item>
+      <title>1113｜19岁安德烈耶娃，反超21分？</title>
+      <description>昨天总决赛第四天：米拉·安德烈耶娃 6-4、6-0 横扫萨巴伦卡，连赢最后 11 局，小组第一打进四强；斯维托丽娜 3-6、6-2、6-2 逆转穆霍娃，保住出线希望；双打第一组达布罗夫斯基和斯特凡尼两战全胜，小组领跑；深聊年终第二这笔账：这场球怎么赢的、21 分怎么算的、明天凌晨生死战怎么看。本节目由 AI 语音播报，赛果与数据经人工核对。</description>
+      <pubDate>Thu, 12 Nov 2026 23:30:00 GMT</pubDate>
+      <guid isPermaLink="false">tennispodcast-1113</guid>
+      <enclosure url="https://robertyang87.github.io/tennispodcast/1113.mp3" length="18457121" type="audio/mpeg"/>
+      <itunes:duration>00:12:49</itunes:duration>
+      <itunes:summary>昨天总决赛第四天：米拉·安德烈耶娃 6-4、6-0 横扫萨巴伦卡，连赢最后 11 局，小组第一打进四强；斯维托丽娜 3-6、6-2、6-2 逆转穆霍娃，保住出线希望；双打第一组达布罗夫斯基和斯特凡尼两战全胜，小组领跑；深聊年终第二这笔账：这场球怎么赢的、21 分怎么算的、明天凌晨生死战怎么看。本节目由 AI 语音播报，赛果与数据经人工核对。</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
   </channel>
 </rss>
