@@ -7,6 +7,13 @@
       "reason": "「埃」连读弱化，回听被听成「伊拉拉」；孤立测试证实",
       "source_episode": "1104",
       "verified": "1104、1105 两期孤立测试＋全段回听均正确还原"
+    },
+    {
+      "display": "柏林",
+      "reading": "伯林",
+      "reason": "tennislive HOMOPHONES 换字规则：edge-tts 读「柏林」为 bo 错音，换「伯林」后正确；1114 期孤立测试＋全段回听（S3c）均证实音频为 bo2 lin2",
+      "source_episode": "1114",
+      "verified": "1114 孤立测试 bolin＋全段回听 S3c 均正确还原"
     }
   ],
   "pinyin_pins": [
@@ -239,6 +246,11 @@
       "word": "菲斯",
       "pinyin": "fei1 si1",
       "source_episode": "1113"
+    },
+    {
+      "word": "施耐德",
+      "pinyin": "shi1 nai4 de2",
+      "source_episode": "1114"
     }
   ],
   "rewrite_rules": [
