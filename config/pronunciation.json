@@ -14,6 +14,13 @@
       "reason": "tennislive HOMOPHONES 换字规则：edge-tts 读「柏林」为 bo 错音，换「伯林」后正确；1114 期孤立测试＋全段回听（S3c）均证实音频为 bo2 lin2",
       "source_episode": "1114",
       "verified": "1114 孤立测试 bolin＋全段回听 S3c 均正确还原"
+    },
+    {
+      "display": "硬地",
+      "reading": "硬帝",
+      "reason": "tennislive HOMOPHONES 换字规则：edge-tts 把形容词后的「地」读轻声 de，换「帝」后正确；1115 期孤立测试＋全段回听（S1_2/S3c）均证实音频为 di4",
+      "source_episode": "1115",
+      "verified": "1115 孤立测试 yingdi＋全段回听 S1_2/S3c 均正确还原"
     }
   ],
   "pinyin_pins": [
@@ -251,6 +258,11 @@
       "word": "施耐德",
       "pinyin": "shi1 nai4 de2",
       "source_episode": "1114"
+    },
+    {
+      "word": "施奈德",
+      "pinyin": "shi1 nai4 de2",
+      "source_episode": "1115"
     }
   ],
   "rewrite_rules": [
@@ -283,6 +295,12 @@
       "reason": "1112 期三查：děi 义的「得」与 dé／轻声 de 混淆风险高，TTS 易读错；沿 1110 期「得给」→「要给」先例",
       "fix": "改写为「要」字句（1112 实际改法：S0b/S1_5/S3f「还得看」→「还要看」；S1_1「都得」→「都要」；S1_3「得先」→「要先」）",
       "source_episode": "1112"
+    },
+    {
+      "pattern": "抢十＋十比X 连读（抢十十比三类）",
+      "reason": "1115 期孤立测试：原式「决胜抢十十比三」被听成「抢实时比赛」；仲裁对照「抢十局十比三」与「抢十，十比三拿下」均精确还原，原式再听仍塌缩",
+      "fix": "reading 用「抢十局」断开（抢十局十比三），display 不变",
+      "source_episode": "1115"
     }
   ]
 }
