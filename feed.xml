@@ -175,5 +175,16 @@
       <itunes:explicit>false</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
+    <item>
+      <title>1116｜19岁对32岁，谁拿总决赛？</title>
+      <description>昨天总决赛半决赛：米拉·安德烈耶娃 6-3、6-4 赢了佩古拉，进决赛；斯维托丽娜 6-2、6-1 赢了诺斯科娃，也进决赛；双打半决赛西尼亚科娃和汤森德、埃拉尼和保利尼晋级；深聊 19 岁对 32 岁这场决赛：米拉·安德烈耶娃怎么赢的、斯维托丽娜怎么赢的、决赛怎么看。本节目由 AI 语音播报，赛果与数据经人工核对。</description>
+      <pubDate>Sun, 15 Nov 2026 23:30:00 GMT</pubDate>
+      <guid isPermaLink="false">tennispodcast-1116</guid>
+      <enclosure url="https://robertyang87.github.io/tennispodcast/1116.mp3" length="17149954" type="audio/mpeg"/>
+      <itunes:duration>00:11:55</itunes:duration>
+      <itunes:summary>昨天总决赛半决赛：米拉·安德烈耶娃 6-3、6-4 赢了佩古拉，进决赛；斯维托丽娜 6-2、6-1 赢了诺斯科娃，也进决赛；双打半决赛西尼亚科娃和汤森德、埃拉尼和保利尼晋级；深聊 19 岁对 32 岁这场决赛：米拉·安德烈耶娃怎么赢的、斯维托丽娜怎么赢的、决赛怎么看。本节目由 AI 语音播报，赛果与数据经人工核对。</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
   </channel>
 </rss>
