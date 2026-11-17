@@ -318,6 +318,76 @@
       "word": "数字",
       "pinyin": "shu4 zi4",
       "source_episode": "1117"
+    },
+    {
+      "word": "阿雷瓦洛",
+      "pinyin": "a1 lei2 wa3 luo4",
+      "source_episode": "1118"
+    },
+    {
+      "word": "帕维奇",
+      "pinyin": "pa4 wei2 qi2",
+      "source_episode": "1118"
+    },
+    {
+      "word": "赫利厄瓦拉",
+      "pinyin": "he4 li4 e4 wa3 la1",
+      "source_episode": "1118"
+    },
+    {
+      "word": "帕滕",
+      "pinyin": "pa4 teng2",
+      "source_episode": "1118"
+    },
+    {
+      "word": "特松加",
+      "pinyin": "te4 song1 jia1",
+      "source_episode": "1118"
+    },
+    {
+      "word": "伯蒂奇",
+      "pinyin": "bo2 di4 qi2",
+      "source_episode": "1118"
+    },
+    {
+      "word": "孟菲尔斯",
+      "pinyin": "meng4 fei1 er3 si1",
+      "source_episode": "1118"
+    },
+    {
+      "word": "长成",
+      "pinyin": "zhang3 cheng2",
+      "source_episode": "1118"
+    },
+    {
+      "word": "多长",
+      "pinyin": "duo1 chang2",
+      "source_episode": "1118"
+    },
+    {
+      "word": "觉得",
+      "pinyin": "jue2 de5",
+      "source_episode": "1118"
+    },
+    {
+      "word": "出线",
+      "pinyin": "chu1 xian4",
+      "source_episode": "1118"
+    },
+    {
+      "word": "领军人物",
+      "pinyin": "ling3 jun1 ren2 wu4",
+      "source_episode": "1118"
+    },
+    {
+      "word": "制胜分",
+      "pinyin": "zhi4 sheng4 fen1",
+      "source_episode": "1118"
+    },
+    {
+      "word": "医疗暂停",
+      "pinyin": "yi1 liao2 zan4 ting2",
+      "source_episode": "1118"
     }
   ],
   "rewrite_rules": [
@@ -356,6 +426,18 @@
       "reason": "1115 期孤立测试：原式「决胜抢十十比三」被听成「抢实时比赛」；仲裁对照「抢十局十比三」与「抢十，十比三拿下」均精确还原，原式再听仍塌缩",
       "fix": "reading 用「抢十局」断开（抢十局十比三），display 不变",
       "source_episode": "1115"
+    },
+    {
+      "banned_in_reading": "非受迫性失误",
+      "reason": "1118 期：云健在整句语境中「性」被稳定听成行/形/醒（iso 整句 +0%、S1_1/S3c 全段 small+medium 五次均未还原 xing4；孤立短句可读对，属整句语境问题）",
+      "fix": "reading 改「主动失误」（1118 实际改法：S1_1/S3c 各两处；display 保留「非受迫性失误」）",
+      "source_episode": "1118"
+    },
+    {
+      "banned_in_reading": "保发",
+      "reason": "1118 期：云健「保发」被稳定听成「爆发」（孤立句 +0% medium、S1_3 全段 small+medium 均如此；bǎo 三声在快语流中被听成 bào）",
+      "fix": "reading 改「守住发球局」（1118 实际改法：S1_3 两处；display 保留「保发」）",
+      "source_episode": "1118"
     }
   ]
 }
