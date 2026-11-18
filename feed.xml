@@ -208,5 +208,16 @@
       <itunes:explicit>false</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
+    <item>
+      <title>1119｜阿卡带伤锁第一，谁周五回家？</title>
+      <description>昨天都灵第四天：阿尔卡拉斯 6-2、6-4 赢了梅德韦德夫，带伤锁定小组第一；蒂亚福 7-6(6)、6-0 赢了科博利，东道主出局；双打克拉维茨和皮茨第一个进四强；深聊阿尔卡拉斯带伤锁第一、梅德韦德夫和蒂亚福周五打生死战：赢得有多稳、伤得有多悬、蒂亚福怎么把东道主打回家、周五就是四分之一决赛。本节目由 AI 语音播报，赛果与数据经人工核对。</description>
+      <pubDate>Wed, 18 Nov 2026 23:30:00 GMT</pubDate>
+      <guid isPermaLink="false">tennispodcast-1119</guid>
+      <enclosure url="https://robertyang87.github.io/tennispodcast/1119.mp3" length="17406372" type="audio/mpeg"/>
+      <itunes:duration>00:12:05</itunes:duration>
+      <itunes:summary>昨天都灵第四天：阿尔卡拉斯 6-2、6-4 赢了梅德韦德夫，带伤锁定小组第一；蒂亚福 7-6(6)、6-0 赢了科博利，东道主出局；双打克拉维茨和皮茨第一个进四强；深聊阿尔卡拉斯带伤锁第一、梅德韦德夫和蒂亚福周五打生死战：赢得有多稳、伤得有多悬、蒂亚福怎么把东道主打回家、周五就是四分之一决赛。本节目由 AI 语音播报，赛果与数据经人工核对。</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
   </channel>
 </rss>
