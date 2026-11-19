@@ -453,6 +453,26 @@
       "word": "生死战",
       "pinyin": "sheng1 si3 zhan4",
       "source_episode": "1119"
+    },
+    {
+      "word": "阿里巴格",
+      "pinyin": "a1 li3 ba1 ge2",
+      "source_episode": "1120"
+    },
+    {
+      "word": "奥利维蒂",
+      "pinyin": "ao4 li4 wei2 di4",
+      "source_episode": "1120"
+    },
+    {
+      "word": "卢兹",
+      "pinyin": "lu2 zi1",
+      "source_episode": "1120"
+    },
+    {
+      "word": "马托斯",
+      "pinyin": "ma3 tuo4 si1",
+      "source_episode": "1120"
     }
   ],
   "rewrite_rules": [
@@ -503,6 +523,12 @@
       "reason": "1118 期：云健「保发」被稳定听成「爆发」（孤立句 +0% medium、S1_3 全段 small+medium 均如此；bǎo 三声在快语流中被听成 bào）",
       "fix": "reading 改「守住发球局」（1118 实际改法：S1_3 两处；display 保留「保发」）",
       "source_episode": "1118"
+    },
+    {
+      "banned_in_reading": "赢完",
+      "reason": "1120 期 iso hai2 案「可赢完还不能庆祝」被听成「可英文还不能庆祝」（ying2 wan2 与 ying1 wen2 易混）",
+      "fix": "有宾语改「赢下」（赢下这一场），无宾语改「赢了」（赢了还不能庆祝／赢了球）",
+      "source_episode": "1120"
     }
   ]
 }
