@@ -192,6 +192,16 @@
       "audio_bytes": 17365621,
       "duration": "00:12:04",
       "episode_type": "full"
+    },
+    {
+      "title": "1122｜决赛出炉：世界第一对上十三连胜",
+      "description": "昨天都灵第七天：阿尔卡拉斯 3-6、6-3、7-6(1) 让一追二赢了谢尔顿，十三连胜进决赛；兹维列夫 7-6(0)、6-4 赢了梅德韦德夫，抢七一分没丢；双打决赛也齐了。深聊这场决赛是怎么拼出来的：凭让一追二、凭抢七零封苦主、凭周日世界第一对十三连胜。本节目由 AI 语音播报，赛果与数据经人工核对。",
+      "pub_date": "2026-11-22T06:40:00+08:00",
+      "guid": "tennispodcast-1122",
+      "audio_url": "https://robertyang87.github.io/tennispodcast/1122.mp3",
+      "audio_bytes": 17570630,
+      "duration": "00:12:12",
+      "episode_type": "full"
     }
   ]
 }
