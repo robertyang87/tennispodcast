@@ -263,5 +263,16 @@
       <itunes:explicit>false</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
+    <item>
+      <title>1124｜决赛刚打完，他们又要碰面了？</title>
+      <description>昨天周一没有比赛，但有两件大事：ATP 公布了年终排名，兹维列夫第一，阿尔卡拉斯只差辛纳350分；双打排名也定了，奥利维蒂第12、阿里巴格第13，双双生涯新高。今天周二，戴维斯杯在博洛尼亚开打。深聊决赛刚打完、阿尔卡拉斯和兹维列夫可能在半决赛又要碰面这件事：凭下半区的重逢路线、凭意大利的卫冕、凭为国而战的最后一战。本节目由 AI 语音播报，赛果与数据经人工核对。</description>
+      <pubDate>Mon, 23 Nov 2026 22:45:00 GMT</pubDate>
+      <guid isPermaLink="false">tennispodcast-1124</guid>
+      <enclosure url="https://robertyang87.github.io/tennispodcast/1124.mp3" length="17748053" type="audio/mpeg"/>
+      <itunes:duration>00:12:19</itunes:duration>
+      <itunes:summary>昨天周一没有比赛，但有两件大事：ATP 公布了年终排名，兹维列夫第一，阿尔卡拉斯只差辛纳350分；双打排名也定了，奥利维蒂第12、阿里巴格第13，双双生涯新高。今天周二，戴维斯杯在博洛尼亚开打。深聊决赛刚打完、阿尔卡拉斯和兹维列夫可能在半决赛又要碰面这件事：凭下半区的重逢路线、凭意大利的卫冕、凭为国而战的最后一战。本节目由 AI 语音播报，赛果与数据经人工核对。</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
   </channel>
 </rss>
