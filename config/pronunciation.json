@@ -21,6 +21,18 @@
       "reason": "tennislive HOMOPHONES 换字规则：edge-tts 把形容词后的「地」读轻声 de，换「帝」后正确；1115 期孤立测试＋全段回听（S1_2/S3c）均证实音频为 di4",
       "source_episode": "1115",
       "verified": "1115 孤立测试 yingdi＋全段回听 S1_2/S3c 均正确还原"
+    },
+    {
+      "display": "阿利亚西姆",
+      "reading": "阿莉亚西姆",
+      "reason": "1124 期 iso：利被听成里（li4/li3）；双模型×孤立＋句内 4/4 一致，F0 仲裁未定论；换字莉（li4 单音）复测仍听成里，证实 Whisper 无法区分此音；按一次入典换字注音",
+      "source_episode": "1124"
+    },
+    {
+      "display": "温布尔登",
+      "reading": "温网",
+      "reason": "1124 期 QC S1_2：温布尔登被听成温波尔登（bu4->bo1）；仲裁孤立双模型听成布正确、句内双模型听成博，证实句内引擎误读；按一次入典改用通用简称温网，重合成＋复检 ASR 明确还原温网",
+      "source_episode": "1124"
     }
   ],
   "pinyin_pins": [
