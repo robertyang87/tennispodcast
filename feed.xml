@@ -285,5 +285,16 @@
       <itunes:explicit>false</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
+    <item>
+      <title>1126｜一百三十二位，在戴维斯杯不算数</title>
+      <description>昨天周三，戴维斯杯四分之一决赛：权纯雨三盘爆冷胜科博利，世界第一百三十九位赢了世界第七，意大利对韩国打成一比一，决胜双打打到深夜；同一天，阿尔卡拉斯说，网球想念辛纳，他也想念他。今天周四，英国对德国，奥地利对西班牙，阿尔卡拉斯和兹维列夫同日出战。深聊权纯雨的冷门、沃兰德里的警告、没有辛纳的意大利：凭一百三十二位、凭沃兰德里的警告、凭决胜双打。本节目由 AI 语音播报，赛果与数据经人工核对。</description>
+      <pubDate>Wed, 25 Nov 2026 23:00:00 GMT</pubDate>
+      <guid isPermaLink="false">tennispodcast-1126</guid>
+      <enclosure url="https://robertyang87.github.io/tennispodcast/1126.mp3" length="17558718" type="audio/mpeg"/>
+      <itunes:duration>00:12:12</itunes:duration>
+      <itunes:summary>昨天周三，戴维斯杯四分之一决赛：权纯雨三盘爆冷胜科博利，世界第一百三十九位赢了世界第七，意大利对韩国打成一比一，决胜双打打到深夜；同一天，阿尔卡拉斯说，网球想念辛纳，他也想念他。今天周四，英国对德国，奥地利对西班牙，阿尔卡拉斯和兹维列夫同日出战。深聊权纯雨的冷门、沃兰德里的警告、没有辛纳的意大利：凭一百三十二位、凭沃兰德里的警告、凭决胜双打。本节目由 AI 语音播报，赛果与数据经人工核对。</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
   </channel>
 </rss>
